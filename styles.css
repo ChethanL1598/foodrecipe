@@ -1,17 +1,20 @@
 /* Add your custom CSS styles here */
 
+@import url('https://fonts.googleapis.com/css?family=Nunito:400,700');
+
 .hero {
   padding: 5px 0;
 }
 
-.container {
-  background-color: #c4f4ee;
+.container-xxl{
+  background-color: #D0F8FC;
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(216, 21, 21, 0.1);
   padding: 20px;
   text-align: center;
-  max-width: 600px;
+  max-width: 500px;
   margin: 0 auto;
+  
 }
 
 .container h2 {
@@ -22,10 +25,8 @@
 
 .container p {
   font-size: 18px;
-  color: rgb(140, 126, 133);
+  color: rgb(81, 195, 233);
 }
-
-
 
 .recipe-section {
   padding: 50px 0;
@@ -37,24 +38,81 @@
 .card{
   height: 100%; 
 }
-.card {
-  transition: transform 0.2s ease;
-  box-shadow: 0 4px 6px 0 rgba(22, 22, 26, 0.18);
-  border-radius: 0;
-  border: 0;
-  margin-bottom: 1.5em;
-  height: 400px;
-  width: 400px;
+
+
+.go-corner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  width: 32px;
+  height: 32px;
+  overflow: hidden;
+  top: 0;
+  right: 0;
+  background-color: #0838d;
+  border-radius: 0 4px 0 32px;
 }
 
+.fa-regular {
+  margin-top: -4px;
+  margin-right: -4px;
+  color: white;
+  font-family: courier, sans;
+}
+
+
+.card {
+  display: block;
+  top: 0px;
+  position: relative;
+  max-width: 450px;
+  background-color: #f2f8f9;
+  border-radius: 4px;
+  padding: 32px 24px;
+  margin: 12px;
+  text-decoration: none;
+  z-index: 0;
+  overflow: hidden;
+  border: 1px solid #f2f8f9;
+
+    &:hover {
+      transition: all 0.2s ease-out;
+      box-shadow: 0px 4px 8px rgba(38, 38, 38, 0.2);
+      top: -4px;
+      border: 1px solid #cccccc;
+      background-color: white;
+    }
+
+    &:before {
+      content: "";
+      position: absolute;
+      z-index: -1;
+      top: -16px;
+      right: -16px;
+      background: #00838d;
+      height: 32px;
+      width: 32px;
+      border-radius: 32px;
+      transform: scale(2);
+      transform-origin: 50% 50%;
+      transition: transform 0.15s ease-out;
+    }
+    &:hover:before {
+      transform: scale(2.15);
+     }
+}
+
+
 .card-img {
-  width: 50%;
+  width: 100%;
   height: 50%;
-  object-fit: cover;
+
+  top: 0;
+  left: 0;
+  border-radius: 15px;
 }
-.card:hover {
-  transform: scale(1.1);
-}
+
 
 .btn{
   background-color: #626262;
